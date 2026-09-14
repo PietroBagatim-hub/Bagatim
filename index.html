@@ -3,133 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pietro Bagatim - Selecione o Portal</title>
+    <title>Bagatim - Selecione o Portal</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            display: flex;
-            height: 100vh;
-            width: 100vw;
-            overflow: hidden;
-            background-color: #0d1117;
-        }
-
-        .split {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: #ffffff;
-            transition: all 0.4s ease;
-            padding: 30px;
-            text-align: center;
-            position: relative;
-        }
-
-        /* Lado Esquerdo: Imóveis e Negócios */
-        .left {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Lado Direito: Educacional e Treinamentos */
-        .right {
-            background: linear-gradient(135deg, #1e130c, #3a1c71, #d76d77);
-        }
-
-        .split:hover {
-            flex: 1.25;
-            filter: brightness(1.15);
-        }
-
-        .icon {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        p {
-            font-size: 1.05rem;
-            opacity: 0.9;
-            max-width: 340px;
-            line-height: 1.5;
-        }
-
-        .btn {
-            margin-top: 30px;
-            padding: 14px 32px;
-            border: 2px solid #ffffff;
-            border-radius: 30px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1.2px;
-            transition: background 0.3s, color 0.3s, transform 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .split:hover .btn {
-            background: #ffffff;
-            color: #111111;
-            transform: translateY(-2px);
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        body { display: flex; height: 100vh; width: 100vw; overflow: hidden; background-color: #0d1117; }
+        .split { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: #ffffff; transition: all 0.4s ease; padding: 30px; text-align: center; }
+        .left { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); border-right: 1px solid rgba(255, 255, 255, 0.1); }
+        .right { background: linear-gradient(135deg, #1e130c, #3a1c71, #d76d77); }
+        .split:hover { flex: 1.25; filter: brightness(1.15); }
+        .icon { font-size: 3.5rem; margin-bottom: 20px; }
+        h2 { font-size: 2rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1.5px; }
+        p { font-size: 1.05rem; opacity: 0.9; max-width: 340px; line-height: 1.5; }
+        .btn { margin-top: 30px; padding: 14px 32px; border: 2px solid #ffffff; border-radius: 30px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1.2px; transition: background 0.3s, color 0.3s; }
+        .split:hover .btn { background: #ffffff; color: #111111; }
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-            .split:hover {
-                flex: 1;
-            }
-            .left {
-                border-right: none;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
-            .icon {
-                font-size: 2.5rem;
-                margin-bottom: 10px;
-            }
-            .btn {
-                margin-top: 20px;
-                padding: 10px 24px;
-            }
+            body { flex-direction: column; }
+            .split:hover { flex: 1; }
+            .left { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+            h2 { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- LADO ESQUERDO: Imóveis e Negócios -->
+    <!-- LADO ESQUERDO -->
     <a href="https://www.bagatimimoveis.com" class="split left">
         <div class="icon">🏢</div>
-        <h2>Imóveis & Negócios</h2>
-        <p>Intermediação imobiliária, consultoria de ativos e avaliações mercadológicas.</p>
+        <h2>Imóveis, Negócios & Avaliações</h2>
+        <p>Intermediação imobiliária, consultoria de ativos e pareceres técnicos de avaliação mercadológica.</p>
         <div class="btn">Acessar Imóveis</div>
     </a>
 
-    <!-- LADO DIREITO: Educacional e Treinamentos -->
+    <!-- LADO DIREITO -->
     <a href="https://www.bagatimeducacional.com" class="split right">
         <div class="icon">🎓</div>
         <h2>Educacional & Treinamentos</h2>
-        <p>Cursos, treinamentos profissionais, conteúdos e desenvolvimento acadêmico.</p>
+        <p>Cursos, treinamentos profissionais, conteúdos didáticos e desenvolvimento acadêmico.</p>
         <div class="btn">Acessar Educacional</div>
     </a>
 
