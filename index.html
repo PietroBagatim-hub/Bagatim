@@ -20,25 +20,25 @@
         body { display: flex; height: 100vh; width: 100vw; overflow: hidden; background-color: #0d1117; }
 
         /* Estilos da Página Dividida (Split Screen) */
-        .split { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: #ffffff; transition: all 0.4s ease; padding: 30px; text-align: center; position: relative; border-right: 1px solid rgba(255, 255, 255, 0.1); }
+        .split { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: #ffffff; transition: all 0.4s ease; padding: 20px; text-align: center; position: relative; border-right: 1px solid rgba(255, 255, 255, 0.1); }
         .split:last-child { border-right: none; }
         
-        /* Cores e Gradientes das 3 Seções */
-        .left { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
-        .center { background: linear-gradient(135deg, #1f4037, #99f2c4); color: #ffffff; }
-        .center h2, .center p, .center .btn { color: #ffffff; border-color: #ffffff; }
-        .right { background: linear-gradient(135deg, #1e130c, #3a1c71, #d76d77); }
+        /* Cores e Gradientes das 4 Seções */
+        .sec-imoveis { background: linear-gradient(135deg, #0f2027, #203a43); }
+        .sec-negocios { background: linear-gradient(135deg, #1c2e3d, #2c5364); }
+        .sec-avaliacao { background: linear-gradient(135deg, #1f4037, #2d6a4f); }
+        .sec-educacional { background: linear-gradient(135deg, #3a1c71, #d76d77); }
         
         /* Efeitos de Hover */
         .split:hover { flex: 1.25; filter: brightness(1.15); }
         
         /* Conteúdo dos Blocos */
-        .icon { font-size: 3.5rem; margin-bottom: 20px; }
-        h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1.5px; }
-        p { font-size: 1rem; opacity: 0.9; max-width: 340px; line-height: 1.5; }
+        .icon { font-size: 3rem; margin-bottom: 15px; }
+        h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1.2px; }
+        p { font-size: 0.95rem; opacity: 0.9; max-width: 280px; line-height: 1.4; }
         
         /* Botões */
-        .btn { margin-top: 30px; padding: 14px 28px; border: 2px solid #ffffff; border-radius: 30px; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.2px; transition: background 0.3s, color 0.3s; }
+        .btn { margin-top: 25px; padding: 12px 24px; border: 2px solid #ffffff; border-radius: 30px; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; transition: background 0.3s, color 0.3s; }
         .split:hover .btn { background: #ffffff; color: #111111; }
 
         /* Responsividade para Celulares */
@@ -47,35 +47,43 @@
             .split { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
             .split:last-child { border-bottom: none; }
             .split:hover { flex: 1; }
-            .icon { font-size: 2.5rem; margin-top: 15px; margin-bottom: 8px; }
-            h2 { font-size: 1.3rem; }
-            p { font-size: 0.9rem; }
-            .btn { margin-top: 15px; padding: 10px 20px; }
+            .icon { font-size: 2.2rem; margin-top: 10px; margin-bottom: 5px; }
+            h2 { font-size: 1.1rem; margin-bottom: 5px; }
+            p { font-size: 0.85rem; }
+            .btn { margin-top: 10px; padding: 8px 16px; font-size: 0.75rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- LADO ESQUERDO: IMÓVEIS -->
-    <a href="https://www.bagatimimoveis.com" class="split left">
-        <div class="icon">🏢</div>
-        <h2>Imóveis & Negócios</h2>
-        <p>Intermediação imobiliária, consultoria de ativos e gestão imobiliária especializada.</p>
+    <!-- BLOCO 1: IMÓVEIS -->
+    <a href="https://www.bagatimimoveis.com" class="split sec-imoveis">
+        <div class="icon">🏠</div>
+        <h2>Imóveis</h2>
+        <p>Intermediação imobiliária, compra, venda e gestão especializada de imóveis.</p>
         <div class="btn">Acessar Imóveis</div>
     </a>
 
-    <!-- CENTRO: AVALIAÇÃO -->
-    <a href="https://hedgehog-sx1zmz.my.canva.site/avaliacao" class="split center" target="_blank" rel="noopener noreferrer">
+    <!-- BLOCO 2: NEGÓCIOS -->
+    <a href="https://www.bagatim.com" class="split sec-negocios">
+        <div class="icon">💼</div>
+        <h2>Negócios</h2>
+        <p>Consultoria de ativos, estruturação de negócios e inteligência patrimonial.</p>
+        <div class="btn">Acessar Negócios</div>
+    </a>
+
+    <!-- BLOCO 3: AVALIAÇÃO -->
+    <a href="https://hedgehog-sx1zmz.my.canva.site/avaliacao" class="split sec-avaliacao" target="_blank" rel="noopener noreferrer">
         <div class="icon">📋</div>
         <h2>Avaliações</h2>
-        <p>Pareceres técnicos e avaliação patrimonial e mercadológica para processos, inventários e partilhas.</p>
+        <p>Pareceres técnicos e avaliação patrimonial e mercadológica para processos e partilhas.</p>
         <div class="btn">Acessar Avaliações</div>
     </a>
 
-    <!-- LADO DIREITO: EDUCACIONAL -->
-    <a href="https://www.bagatimeducacional.com" class="split right">
+    <!-- BLOCO 4: EDUCACIONAL -->
+    <a href="https://www.bagatimeducacional.com" class="split sec-educacional">
         <div class="icon">🎓</div>
-        <h2>Educacional & Treinamentos</h2>
+        <h2>Educacional</h2>
         <p>Cursos, treinamentos profissionais, conteúdos didáticos e desenvolvimento acadêmico.</p>
         <div class="btn">Acessar Educacional</div>
     </a>
